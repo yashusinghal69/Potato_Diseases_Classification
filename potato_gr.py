@@ -1,19 +1,21 @@
 import gradio as gr
 import tensorflow as tf
-#import numpy as np
+import numpy as np
 
-model=tf.keras.models.load_model("final_model_99%.keras")
-class_names =['Potato___Early_blight','Potato___Late_blight','Potato___healthy']
+model=tf.keras.models.load_model("final_model_v_full.keras")
+class_names =['Potato___Early_blight','Potato___healthy','Potato___Late_blight']
+
+    
 
 def predict(img):
-    img_array = img.reshape(-1,128,128,3)
-    # img_array = tf.keras.preprocessing.image.img_to_array(img)
+    img_array = img.reshape(-1,256,256,3)
+#     img_array = tf.keras.preprocessing.image.img_to_array(img)
     #img_array = tf.expand_dims(img_array, 0)
-    predictions = model.predict(img_array)[0]
-
-#     predicted_class = class_names[np.argmax(predictions[0])]
-#     confidence = round(100 * (np.max(predictions[0])), 2)
-    return {class_names[i]: float(predictions[i]) for i in range(3)}
+    
+    predictions = model.predict(img_array)
+    predicted_class = class_names[np.argmax(predictions[0])]
+    confidence = round(100 * (np.max(predictions[0])), 2)
+    return {class_names[i]: float(predictions[0][i]) for i in range(3)}
 
 
 article = "<h3>How to Use:</h3> " \
