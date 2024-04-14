@@ -94,7 +94,7 @@ The main Model consists of around 11 layers from which 6 are combination of Conv
 
 ## Run The Model
 
-The Application is hosted on https://localhost:8080/predict server.
+The Application is hosted on (https://huggingface.co/spaces/YashuSinghal/Potato_Diseases_Classification_CNN).
 
 **To run the model Run the main.py file from API folder and then run the main.html file from the frontend folder**
 
