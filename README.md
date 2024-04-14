@@ -107,4 +107,4 @@ You will see the Prediction as well as the confidence of its prediction.
   ![WhatsApp Image 2024-04-15 at 01 40 18_4f8139b5](https://github.com/alok-8303/editREADME/assets/167020679/4ab417ea-b801-46b6-839b-20fa49cbe3a3)
 
 ## **Results**
-After tuning a hard-coded model the accuracy of the model has reached till **98%**
+After tuning a hard-coded model the accuracy of the model has reached till **97%**
